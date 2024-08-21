@@ -1,0 +1,96 @@
+.main_present{
+
+    @include flexible( flex , row , nowrap, center, center);
+    @extend %altura_total;
+    @extend %background;
+
+    h1{
+        color: $color-claro;
+        font-size: $font-B;
+        text-align: center;
+        &:nth-child(2){font-weight: $font-W1;}
+    }
+
+    @media (max-width: 420px) {
+        width: 100vh;
+    }
+
+}
+
+.main_logos{
+
+    @include flexible( flex , column , nowrap , center , center);
+    @extend %altura_total;
+    background-color: $color-oscuro;
+    gap: 10vh;
+
+    .top_container{
+        color: $color-claro;
+        text-align: center;
+        
+        h1{
+            font-size: 5em;
+            font-weight: $font-W1;
+
+            @media (max-width: 800px) {
+                font-size: 2em;
+            }
+        }
+
+        .asentua:hover{
+            color: $color-asentuado;
+            transition: 1s;
+        }
+
+    }
+
+    .bottom_container{
+        @include grid( 4 , 2vh);
+        color: #fff;
+        width: 80%;
+
+        .boton{
+            @include flexible( flex , row , nowrap , flex-start , center);
+            border: solid $color-claro 1px;
+            border-radius: 10px;
+            padding: 1vh;
+            gap: 3vh;
+
+            img{
+                align-items: flex-start;
+                width: 5vh;
+                margin: 2vh;
+            }
+
+            div{
+                width: 50%;
+
+                h1{
+                    font-size: 3vh;
+                }
+    
+                h5{
+                    font-size: 2vh;
+                    font-weight: $font-W1;
+                    white-space: nowrap;
+                }
+    
+            }
+
+            &:hover{
+                background-color: #252525;
+                border: none;
+                cursor: pointer;
+                transition: 1s;
+            }
+        }
+
+        @media (max-width: 800px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 420px) {
+        width: 100vh;
+    }
+}

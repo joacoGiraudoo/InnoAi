@@ -1,0 +1,26 @@
+footer{
+    @include flexible ( flex , row , nowrap , space-between , center );
+    height: 15vh;
+    padding: 0 10%;
+    background-color: $color-oscuro;
+    border-top: 1px solid $color-claro;
+
+    .contenedor_nav{
+
+        a{
+            text-decoration: none;
+            font-size: $font-Q;
+            color: $color-claro;
+            margin: 0 2vh;
+        
+            &:hover{
+                border-bottom: $color-claro 1px solid;
+            }
+        }
+
+    }
+
+    @media (max-width: 420px) {
+        width: 100vh;
+    }
+}

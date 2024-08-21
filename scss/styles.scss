@@ -1,0 +1,12 @@
+@import "./utilities/mixin";
+@import "./utilities/variables";
+@import "./utilities/extend";
+@import "./utilities/animations";
+
+
+@import "./pages/index";
+
+
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";

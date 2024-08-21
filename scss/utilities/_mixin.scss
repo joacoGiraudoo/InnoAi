@@ -1,0 +1,12 @@
+@mixin flexible( $dis, $direction, $corte, $just, $align ){
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin grid ( $cantidad, $diference){
+    display: grid;
+    grid-template-columns: repeat($cantidad, 1fr);
+    gap: $diference;
+}

@@ -1,0 +1,40 @@
+header{
+    @include flexible( flex , row , nowrap , center , center);
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    background-color: $color-oscuro;
+
+    nav{
+        a{
+            text-decoration: none;
+            color: $color-claro;
+            margin: 2vh;
+            font-size: $font-Q;
+            font-weight: $font-W1;
+        }
+
+        @media (min-width: 420px) {
+            a:last-child{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    header{
+        @include flexible ( flex , row , nowrap , space-around , center);
+        padding: 0 2vh;
+        width: 100vh;
+
+        nav{
+            @include flexible ( flex , row , nowrap , space-between , center);
+            width: 100%;
+        }
+
+        a:not(.view){
+            display: none;
+        }
+    }
+}
