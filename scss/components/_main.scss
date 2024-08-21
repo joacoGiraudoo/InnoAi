@@ -94,3 +94,93 @@
         width: 100vh;
     }
 }
+
+.nosotros{
+    @include flexible(flex, column, nowrap, center, center);
+    height: 150vh;
+    background-color: $color-oscuro;
+    gap: 5vh;
+
+    div{
+        h1{
+            font-size: 15em;
+            text-align: center;
+            font-weight: 200;
+            color: $color-claro;
+        }
+
+        p{
+            font-size: 2em;
+            font-weight: 100;
+            text-align: justify;
+            padding: 0 10%;
+            color: $color-claro;
+        }
+    }
+}
+
+.galeria{
+    @include flexible (flex, column, nowrap, center, center);
+    height: 190vh;
+    gap: 5vh;
+    background-color: $color-oscuro;
+
+    .contenedor_superior{
+        text-align: center;
+        align-items: center;
+
+        h5{
+            font-size: 10vh;
+            font-weight: 100;
+            color: $color-claro;
+        }
+
+        &::first-line{
+            font-weight: 800;
+            color: $color-asentuado;
+        }
+    }
+
+    .tarjetas{
+        @include grid( 3, 5vh);
+
+        div{
+            @include flexible(flex, column, nowrap, flex-start, flex-start);
+            border: $color-asentuado 0.5px solid;
+
+            div{
+                background: $color-oscuro;
+
+                h5{
+                    color: $color-claro;
+                }
+
+                p{
+                    color: $color-claro;
+                }
+
+                a{
+                    color: $color-oscuro;
+                    background: $color-asentuado;
+                    border: none;
+                    font-weight: 600;
+                    width: 15vh;
+
+                    &:hover{
+                        color: $color-claro;
+                        background-color: $color-oscuro;
+                        border: $color-claro 0.5px solid;
+                        transition: 1s;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+
+
+
+}

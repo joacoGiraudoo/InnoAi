@@ -38,6 +38,7 @@ header {
   top: 0;
   height: 10vh;
   background-color: #060809;
+  z-index: 20;
 }
 header nav a {
   text-decoration: none;
@@ -165,6 +166,86 @@ header nav a {
   .main_logos {
     width: 100vh;
   }
+}
+
+.nosotros {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  background-color: #060809;
+  gap: 5vh;
+}
+.nosotros div h1 {
+  font-size: 15em;
+  text-align: center;
+  font-weight: 200;
+  color: #fff;
+}
+.nosotros div p {
+  font-size: 2em;
+  font-weight: 100;
+  text-align: justify;
+  padding: 0 10%;
+  color: #fff;
+}
+
+.galeria {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 190vh;
+  gap: 5vh;
+  background-color: #060809;
+}
+.galeria .contenedor_superior {
+  text-align: center;
+  align-items: center;
+}
+.galeria .contenedor_superior h5 {
+  font-size: 10vh;
+  font-weight: 100;
+  color: #fff;
+}
+.galeria .contenedor_superior::first-line {
+  font-weight: 800;
+  color: #FF3B58;
+}
+.galeria .tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vh;
+}
+.galeria .tarjetas div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: #FF3B58 0.5px solid;
+}
+.galeria .tarjetas div div {
+  background: #060809;
+}
+.galeria .tarjetas div div h5 {
+  color: #fff;
+}
+.galeria .tarjetas div div p {
+  color: #fff;
+}
+.galeria .tarjetas div div a {
+  color: #060809;
+  background: #FF3B58;
+  border: none;
+  font-weight: 600;
+  width: 15vh;
+}
+.galeria .tarjetas div div a:hover {
+  color: #fff;
+  background-color: #060809;
+  border: #fff 0.5px solid;
+  transition: 1s;
 }
 
 footer {
