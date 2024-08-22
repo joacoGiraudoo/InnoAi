@@ -15,6 +15,10 @@ header{
             font-weight: $font-W1;
         }
 
+        img{
+            width: 18vh;
+        }
+
         @media (min-width: 420px) {
             a:last-child{
                 display: none;

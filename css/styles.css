@@ -47,6 +47,9 @@ header nav a {
   font-size: 2vh;
   font-weight: 100;
 }
+header nav img {
+  width: 18vh;
+}
 @media (min-width: 420px) {
   header nav a:last-child {
     display: none;
@@ -196,7 +199,7 @@ header nav a {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 220vh;
+  height: 250vh;
   gap: 5vh;
   background-color: #060809;
 }
@@ -246,6 +249,32 @@ header nav a {
   color: #fff;
   background-color: #252525;
   transition: 1s;
+}
+
+.chat {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #060809;
+  color: #fff;
+}
+.chat div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+.chat h5 {
+  font-weight: 200;
+}
+.chat a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1.5vh 5vh;
+  background-color: #fff;
+  color: #060809;
+  border-radius: 50px;
 }
 
 footer {

@@ -121,7 +121,7 @@
 
 .galeria{
     @include flexible (flex, column, nowrap, center, center);
-    height: 220vh;
+    height: 250vh;
     gap: 5vh;
     background-color: $color-oscuro;
 
@@ -180,8 +180,30 @@
 
         }
     }
+}
 
+.chat{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: $color-oscuro;
+    color: $color-claro;
 
+    div{
+        @include flexible (flex, column, nowrap, center, center);
+        gap: 2vh;
+    }
 
+    h5{
+        font-weight: 200;
+    }
 
+    a{
+        color: $color-claro;
+        text-decoration: none;
+        padding: 1.5vh 5vh;
+        background-color: $color-claro;
+        color: $color-oscuro;
+        border-radius: 50px;
+    }
 }
