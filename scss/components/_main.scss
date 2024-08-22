@@ -8,7 +8,8 @@
         color: $color-claro;
         font-size: $font-B;
         text-align: center;
-        &:nth-child(2){font-weight: $font-W1;}
+        &:nth-child(2){font-weight: $font-W1;} 
+	    animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
     @media (max-width: 420px) {
