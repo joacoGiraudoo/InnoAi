@@ -1,6 +1,6 @@
-.main_present{
+.present{
 
-    @include flexible( flex , row , nowrap, center, center);
+    @include flexible( flex , row , wrap, center, center);
     @extend %altura_total;
     @extend %background;
 
@@ -13,14 +13,14 @@
     }
 
     @media (max-width: 420px) {
-        width: 100vh;
+        width: 100vw;
     }
 
 }
 
 .main_logos{
 
-    @include flexible( flex , column , nowrap , center , center);
+    @include flexible( flex , column , wrap , center , center);
     @extend %altura_total;
     background-color: $color-oscuro;
     gap: 10vh;
@@ -51,7 +51,7 @@
         width: 80%;
 
         .boton{
-            @include flexible( flex , row , nowrap , flex-start , center);
+            @include flexible( flex , row , wrap , flex-start , center);
             border: solid $color-claro 1px;
             border-radius: 10px;
             padding: 1vh;
@@ -97,7 +97,7 @@
 }
 
 .nosotros{
-    @include flexible(flex, column, nowrap, center, center);
+    @include flexible(flex, column, wrap, center, center);
     height: 220vh;
     background-color: $color-oscuro;
     gap: 5vh;
@@ -121,7 +121,7 @@
 }
 
 .galeria{
-    @include flexible (flex, column, nowrap, center, center);
+    @include flexible (flex, column, wrap, center, center);
     height: 250vh;
     gap: 5vh;
     background-color: $color-oscuro;
@@ -146,7 +146,7 @@
         @include grid( 3, 5vh);
 
         div{
-            @include flexible(flex, column, nowrap, flex-start, flex-start);
+            @include flexible(flex, column, wrap, flex-start, flex-start);
             border: $color-asentuado 0.5px solid;
 
             div{
@@ -191,7 +191,7 @@
     color: $color-claro;
 
     div{
-        @include flexible (flex, column, nowrap, center, center);
+        @include flexible (flex, column, wrap, center, center);
         gap: 2vh;
     }
 
@@ -206,5 +206,102 @@
         background-color: $color-claro;
         color: $color-oscuro;
         border-radius: 50px;
+    }
+}
+
+.main_descarga{
+    @include flexible (flex, column, wrap, center, center);
+    background-color: $color-oscuro;
+    height: 100vh;
+    gap: 2em;
+
+    div{
+        @include flexible (flex, row, wrap, center, center);
+        gap: 2rem;
+    }
+
+    p{
+        color: #fff;
+    }
+
+    h1{
+        color: $color-asentuado;
+    }
+
+    h2{
+        color: $color-claro;
+        width: 25rem;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    .sectorT{
+        @include flexible (flex, column, nowrap, center, center);
+
+    }
+
+    img{
+        width: 20vw;
+        border-radius: 20px;
+    }
+
+    button{
+        color: $color-claro;
+        background-color: $color-oscuro;
+        border: 1px solid #222222;
+        border-radius: 20px;
+        padding: 1rem;
+
+        &:hover{
+            background-color: $color-asentuado;
+            color: #222222;
+            transition: 2s;
+        }
+    }
+}
+
+.main_opiniones{
+    @include grid (1, 1fr);
+    align-items: center;
+    justify-content: center;
+    background-color: $color-oscuro;
+    color: $color-claro;
+    height: 100vh;
+    padding: 0 10rem;
+
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-asentuado;
+        padding-top: 2rem;
+    }
+
+    .container1{
+        @include flexible (flex, row, wrap, center, center);
+        border-radius: 20px;
+        padding: 20px;
+
+        p{
+            text-align: center;
+        }
+
+        img{
+            width: 10vw;
+            border-radius: 100px;
+        }
+    }
+
+    .container2{
+        @include flexible (flex, row, wrap, center, center);
+
+        .box{
+            @include flexible (flex, column, wrap, center, center);
+            width: 15vw;
+            height: 15vh;
+            color: $color-claro;
+        }
+
     }
 }

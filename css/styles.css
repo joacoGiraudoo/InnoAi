@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
-.main_logos, .main_present {
+.main_logos, .present {
   width: 100%;
   height: 100vh;
 }
 
-.main_present {
+.present {
   background-image: url(../../img/backgroundMain1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -43,25 +43,30 @@ header {
   z-index: 20;
 }
 header nav {
+  width: 100vw;
+  height: 100%;
+}
+header nav ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  height: 100%;
 }
-header nav a {
+header nav ul li {
+  list-style: none;
+  padding: 1.5vh;
+}
+header nav ul li a {
   text-decoration: none;
   color: #fff;
   margin: 2vh;
   font-size: 2vh;
   font-weight: 100;
 }
-header nav img {
+header nav ul li img {
   width: 18vh;
-}
-@media (min-width: 420px) {
-  header nav a:last-child {
-    display: none;
-  }
 }
 
 @media (max-width: 420px) {
@@ -71,43 +76,43 @@ header nav img {
     justify-content: space-around;
     align-items: center;
     padding: 0 2vh;
-    width: 100vh;
+    width: 100vw;
   }
   header nav {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
   }
-  header a:not(.view) {
+  header ul li a:not(.view) {
     display: none;
   }
 }
-.main_present {
+.present {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-.main_present h1 {
+.present h1 {
   color: #fff;
   font-size: 8vh;
   text-align: center;
   animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-.main_present h1:nth-child(2) {
+.present h1:nth-child(2) {
   font-weight: 100;
 }
 @media (max-width: 420px) {
-  .main_present {
-    width: 100vh;
+  .present {
+    width: 100vw;
   }
 }
 
 .main_logos {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   background-color: #060809;
@@ -139,7 +144,7 @@ header nav img {
 }
 .main_logos .bottom_container .boton {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   border: solid #fff 1px;
@@ -182,7 +187,7 @@ header nav img {
 
 .nosotros {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   height: 220vh;
@@ -205,7 +210,7 @@ header nav img {
 
 .galeria {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   height: 250vh;
@@ -232,7 +237,7 @@ header nav img {
 }
 .galeria .tarjetas div {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
   border: #FF3B58 0.5px solid;
@@ -269,7 +274,7 @@ header nav img {
 }
 .chat div {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 2vh;
@@ -286,6 +291,106 @@ header nav img {
   border-radius: 50px;
 }
 
+.main_descarga {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #060809;
+  height: 100vh;
+  gap: 2em;
+}
+.main_descarga div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main_descarga p {
+  color: #fff;
+}
+.main_descarga h1 {
+  color: #FF3B58;
+}
+.main_descarga h2 {
+  color: #fff;
+  width: 25rem;
+  text-align: center;
+  font-weight: 200;
+}
+.main_descarga .sectorT {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_descarga img {
+  width: 20vw;
+  border-radius: 20px;
+}
+.main_descarga button {
+  color: #fff;
+  background-color: #060809;
+  border: 1px solid #222222;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.main_descarga button:hover {
+  background-color: #FF3B58;
+  color: #222222;
+  transition: 2s;
+}
+
+.main_opiniones {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1fr;
+  align-items: center;
+  justify-content: center;
+  background-color: #060809;
+  color: #fff;
+  height: 100vh;
+  padding: 0 10rem;
+}
+.main_opiniones h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF3B58;
+  padding-top: 2rem;
+}
+.main_opiniones .container1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+}
+.main_opiniones .container1 p {
+  text-align: center;
+}
+.main_opiniones .container1 img {
+  width: 10vw;
+  border-radius: 100px;
+}
+.main_opiniones .container2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_opiniones .container2 .box {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 15vh;
+  color: #fff;
+}
+
 footer {
   display: flex;
   flex-flow: row nowrap;
@@ -294,7 +399,6 @@ footer {
   height: 15vh;
   padding: 0 10%;
   background-color: #060809;
-  border-top: 1px solid #fff;
 }
 footer .contenedor_nav a {
   text-decoration: none;

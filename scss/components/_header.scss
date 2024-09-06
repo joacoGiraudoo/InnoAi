@@ -7,23 +7,30 @@ header{
     z-index: 20;
 
     nav{
-        @include flexible( flex , row , nowrap , center , center);
+        width: 100vw;
+        height: 100%;
         
-        a{
-            text-decoration: none;
-            color: $color-claro;
-            margin: 2vh;
-            font-size: $font-Q;
-            font-weight: $font-W1;
-        }
+        ul{
+            @include flexible( flex , row , nowrap , center , center);
+            padding: 0;
+            height: 100%;
 
-        img{
-            width: 18vh;
-        }
-
-        @media (min-width: 420px) {
-            a:last-child{
-                display: none;
+            li{
+                list-style: none;
+                padding: 1.5vh;
+    
+                a{
+                    text-decoration: none;
+                    color: $color-claro;
+                    margin: 2vh;
+                    font-size: $font-Q;
+                    font-weight: $font-W1;
+                }
+        
+                img{
+                    width: 18vh;
+                }
+        
             }
         }
     }
@@ -33,15 +40,19 @@ header{
     header{
         @include flexible ( flex , row , nowrap , space-around , center);
         padding: 0 2vh;
-        width: 100vh;
+        width: 100vw;
 
         nav{
             @include flexible ( flex , row , nowrap , space-between , center);
-            width: 100%;
+            width: 100vw;
         }
 
-        a:not(.view){
-            display: none;
+        ul{
+            li{
+                a:not(.view){
+                    display: none;
+                }
+            }
         }
     }
 }
