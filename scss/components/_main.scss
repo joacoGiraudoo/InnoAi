@@ -12,73 +12,79 @@
 	    animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
-    @media (max-width: 420px) {
-        width: 100vw;
-    }
-
 }
 
-.main_logos{
+.main_logos {
 
-    @include flexible( flex , column , wrap , center , center);
+    @include flexible(flex, column, wrap, center, center);
     @extend %altura_total;
     background-color: $color-oscuro;
     gap: 10vh;
 
-    .top_container{
+    .top_container {
         color: $color-claro;
         text-align: center;
-        
-        h1{
+
+        h1 {
             font-size: 5em;
             font-weight: $font-W1;
 
             @media (max-width: 800px) {
                 font-size: 2em;
             }
+
+            @media (max-width: 480px) {
+                font-size: 1.5em;  // Ajuste para pantallas más pequeñas
+            }
         }
 
-        .asentua:hover{
+        .asentua:hover {
             color: $color-asentuado;
             transition: 1s;
         }
-
     }
 
-    .bottom_container{
-        @include grid( 4 , 2vh);
+    .bottom_container {
+        @include grid(4, 2vh);
         color: #fff;
         width: 80%;
 
-        .boton{
-            @include flexible( flex , row , wrap , flex-start , center);
+        .boton {
+            @include flexible(flex, row, wrap, flex-start, center);
             border: solid $color-claro 1px;
             border-radius: 10px;
             padding: 1vh;
             gap: 3vh;
 
-            img{
+            img {
                 align-items: flex-start;
-                width: 5vh;
+                width: 2vw;
                 margin: 2vh;
+
+                @media (max-width: 800px) {
+                    width: 4vw;  // Ajuste de imagen para pantallas pequeñas
+                }
             }
 
-            div{
+            div {
                 width: 50%;
 
-                h1{
+                h1 {
                     font-size: 3vh;
                 }
-    
-                h5{
+
+                h5 {
                     font-size: 2vh;
                     font-weight: $font-W1;
                     white-space: nowrap;
+
+                    @media (max-width: 480px) {
+                        font-size: 1.5vh;  // Ajuste para textos más pequeños
+                    }
                 }
-    
             }
 
-            &:hover{
+            &:hover {
                 background-color: #252525;
                 border: none;
                 cursor: pointer;
@@ -89,12 +95,18 @@
         @media (max-width: 800px) {
             grid-template-columns: repeat(2, 1fr);
         }
+
+        @media (max-width: 480px) {
+            grid-template-columns: repeat(1, 1fr);  // Ajuste de una columna para pantallas más pequeñas
+        }
     }
 
     @media (max-width: 420px) {
         width: 100vh;
+        gap: 5vh;  // Ajuste de espacio para pantallas muy pequeñas
     }
 }
+
 
 .nosotros{
     @include flexible(flex, column, wrap, center, center);

@@ -35,24 +35,3 @@ header{
         }
     }
 }
-
-@media (max-width: 420px) {
-    header{
-        @include flexible ( flex , row , nowrap , space-around , center);
-        padding: 0 2vh;
-        width: 100vw;
-
-        nav{
-            @include flexible ( flex , row , nowrap , space-between , center);
-            width: 100vw;
-        }
-
-        ul{
-            li{
-                a:not(.view){
-                    display: none;
-                }
-            }
-        }
-    }
-}

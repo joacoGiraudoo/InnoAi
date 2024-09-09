@@ -31,6 +31,167 @@
   display: none;
 }
 
+.present {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.present h1 {
+  color: #fff;
+  font-size: 5em;
+  text-align: center;
+}
+
+.main_logos {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #060809;
+  gap: 10vh;
+}
+.main_logos .top_container h1 {
+  font-size: 5em;
+  font-weight: 100;
+}
+.main_logos .bottom_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vh;
+}
+.main_logos .bottom_container .boton img {
+  width: 2vw;
+}
+
+.nosotros h1 {
+  font-size: 15em;
+}
+.nosotros p {
+  font-size: 2em;
+}
+
+.galeria h5 {
+  font-size: 10vh;
+}
+
+.chat {
+  height: 100vh;
+}
+
+.main_descarga img {
+  width: 20vw;
+}
+
+.main_opiniones img {
+  width: 10vw;
+}
+
+@media (max-width: 1024px) {
+  .main_logos .top_container h1 {
+    font-size: 4em;
+  }
+  .bottom_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+  }
+  .bottom_container .boton img {
+    width: 3vw;
+  }
+  .nosotros h1 {
+    font-size: 12em;
+  }
+}
+@media (max-width: 800px) {
+  .main_logos {
+    gap: 5vh;
+  }
+  .main_logos .top_container h1 {
+    font-size: 3em;
+  }
+  .bottom_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+  }
+  .bottom_container .boton img {
+    width: 5vw;
+  }
+  .nosotros h1 {
+    font-size: 8em;
+  }
+  .galeria h5 {
+    font-size: 6vh;
+  }
+  .main_descarga img {
+    width: 25vw;
+  }
+  .main_opiniones img {
+    width: 15vw;
+  }
+}
+@media (max-width: 480px) {
+  .main_logos {
+    gap: 5vh;
+  }
+  .main_logos .top_container h1 {
+    font-size: 2em;
+  }
+  .main_logos .bottom_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2vh;
+  }
+  .main_logos .bottom_container .boton img {
+    width: 8vw;
+  }
+  .nosotros h1 {
+    font-size: 4em;
+  }
+  .nosotros p {
+    font-size: 1.5em;
+  }
+  .galeria h5 {
+    font-size: 4vh;
+  }
+  .main_descarga img {
+    width: 50vw;
+  }
+  .main_opiniones img {
+    width: 25vw;
+  }
+  .chat div {
+    padding: 0 2vw;
+  }
+}
+@media (max-width: 320px) {
+  .main_logos {
+    gap: 3vh;
+  }
+  .main_logos .top_container h1 {
+    font-size: 1.5em;
+  }
+  .bottom_container .boton img {
+    width: 10vw;
+  }
+  .nosotros h1 {
+    font-size: 3em;
+  }
+  .galeria h5 {
+    font-size: 3vh;
+  }
+  .main_descarga img {
+    width: 70vw;
+  }
+  .main_opiniones img {
+    width: 35vw;
+  }
+  .chat div {
+    padding: 0 1vw;
+  }
+}
 header {
   display: flex;
   flex-flow: row nowrap;
@@ -69,26 +230,6 @@ header nav ul li img {
   width: 18vh;
 }
 
-@media (max-width: 420px) {
-  header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 2vh;
-    width: 100vw;
-  }
-  header nav {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-  }
-  header ul li a:not(.view) {
-    display: none;
-  }
-}
 .present {
   display: flex;
   flex-flow: row wrap;
@@ -103,11 +244,6 @@ header nav ul li img {
 }
 .present h1:nth-child(2) {
   font-weight: 100;
-}
-@media (max-width: 420px) {
-  .present {
-    width: 100vw;
-  }
 }
 
 .main_logos {
@@ -129,6 +265,11 @@ header nav ul li img {
 @media (max-width: 800px) {
   .main_logos .top_container h1 {
     font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  .main_logos .top_container h1 {
+    font-size: 1.5em;
   }
 }
 .main_logos .top_container .asentua:hover {
@@ -154,8 +295,13 @@ header nav ul li img {
 }
 .main_logos .bottom_container .boton img {
   align-items: flex-start;
-  width: 5vh;
+  width: 2vw;
   margin: 2vh;
+}
+@media (max-width: 800px) {
+  .main_logos .bottom_container .boton img {
+    width: 4vw;
+  }
 }
 .main_logos .bottom_container .boton div {
   width: 50%;
@@ -168,6 +314,11 @@ header nav ul li img {
   font-weight: 100;
   white-space: nowrap;
 }
+@media (max-width: 480px) {
+  .main_logos .bottom_container .boton div h5 {
+    font-size: 1.5vh;
+  }
+}
 .main_logos .bottom_container .boton:hover {
   background-color: #252525;
   border: none;
@@ -179,9 +330,15 @@ header nav ul li img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 480px) {
+  .main_logos .bottom_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @media (max-width: 420px) {
   .main_logos {
     width: 100vh;
+    gap: 5vh;
   }
 }
 

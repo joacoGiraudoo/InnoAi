@@ -1,0 +1,198 @@
+// Estilos base para pantallas grandes (por defecto)
+// Aquí van los estilos generales que ya tienes. Las media queries adaptarán estos estilos a tamaños más pequeños.
+
+.present {
+    @include flexible(flex, column, wrap, center, center);
+    width: 100vw;
+    h1 {
+        color: $color-claro;
+        font-size: 5em;
+        text-align: center;
+    }
+}
+
+.main_logos {
+    @include flexible(flex, column, wrap, center, center);
+    background-color: $color-oscuro;
+    gap: 10vh;
+
+    .top_container {
+        h1 {
+            font-size: 5em;
+            font-weight: $font-W1;
+        }
+    }
+
+    .bottom_container {
+        @include grid(4, 2vh);
+        .boton {
+            img {
+                width: 2vw;
+            }
+        }
+    }
+}
+
+.nosotros {
+    h1 {
+        font-size: 15em;
+    }
+    p {
+        font-size: 2em;
+    }
+}
+
+.galeria {
+    h5 {
+        font-size: 10vh;
+    }
+}
+
+.chat {
+    height: 100vh;
+}
+
+.main_descarga {
+    img {
+        width: 20vw;
+    }
+}
+
+.main_opiniones {
+    img {
+        width: 10vw;
+    }
+}
+
+// Media Queries para pantallas más pequeñas
+
+// Pantallas medianas (laptops y tablets) - max-width: 1024px
+@media (max-width: 1024px) {
+    .main_logos {
+        .top_container h1 {
+            font-size: 4em;
+        }
+    }
+
+    .bottom_container {
+        @include grid(3, 2vh); // Ajuste de tres columnas
+        .boton {
+            img {
+                width: 3vw;
+            }
+        }
+    }
+
+    .nosotros h1 {
+        font-size: 12em;
+    }
+}
+
+// Pantallas tipo tablets y móviles en horizontal - max-width: 800px
+@media (max-width: 800px) {
+    .main_logos {
+        gap: 5vh; // Reducir el espacio entre elementos
+        .top_container h1 {
+            font-size: 3em;
+        }
+    }
+
+    .bottom_container {
+        @include grid(2, 2vh); // Ajustar a dos columnas
+        .boton img {
+            width: 5vw;
+        }
+    }
+
+    .nosotros h1 {
+        font-size: 8em;
+    }
+
+    .galeria h5 {
+        font-size: 6vh;
+    }
+
+    .main_descarga img {
+        width: 25vw;
+    }
+
+    .main_opiniones img {
+        width: 15vw;
+    }
+}
+
+// Pantallas móviles pequeñas - max-width: 480px
+@media (max-width: 480px) {
+    .main_logos {
+        gap: 5vh; // Reducir el espacio entre elementos
+        .top_container h1 {
+            font-size: 2em;
+        }
+
+        .bottom_container {
+            @include grid(1, 2vh); // Ajustar a una columna
+            .boton img {
+                width: 8vw;
+            }
+        }
+    }
+
+    .nosotros {
+        h1 {
+            font-size: 4em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    }
+
+    .galeria h5 {
+        font-size: 4vh;
+    }
+
+    .main_descarga img {
+        width: 50vw;
+    }
+
+    .main_opiniones img {
+        width: 25vw;
+    }
+
+    .chat div {
+        padding: 0 2vw; // Reducir espacio interno para móviles
+    }
+}
+
+// Pantallas muy pequeñas (ej. teléfonos muy compactos) - max-width: 320px
+@media (max-width: 320px) {
+    .main_logos {
+        gap: 3vh;
+        .top_container h1 {
+            font-size: 1.5em;
+        }
+    }
+
+    .bottom_container .boton img {
+        width: 10vw;
+    }
+
+    .nosotros h1 {
+        font-size: 3em;
+    }
+
+    .galeria h5 {
+        font-size: 3vh;
+    }
+
+    .main_descarga img {
+        width: 70vw;
+    }
+
+    .main_opiniones img {
+        width: 35vw;
+    }
+
+    .chat div {
+        padding: 0 1vw;
+    }
+}
